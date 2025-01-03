@@ -1,9 +1,16 @@
-
+import { Box, Typography } from '@mui/material';
 
 const Footer = () => {
   return (
     <div>
-      this  is footer
+      <Box
+        className='text-center text-gray-400 text-sm bg-black w-full'
+        sx={{ padding: '10px 0', textAlign: 'center' }}
+      >
+        <Typography>
+          &copy; {new Date().getFullYear()} All rights reserved . Himel
+        </Typography>
+      </Box>
     </div>
   );
 };
