@@ -8,6 +8,7 @@ export default {
       },
       colors: {
         NavyBlue: '#1A2A4B',
+        navColor: '#0dccf2',
       },
     },
   },

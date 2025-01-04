@@ -4,17 +4,19 @@ import Navbar from '../Pages/Shared/Navbar/Navbar';
 
 const Layouts = () => {
   return (
-    <div className='container mx-auto font-Roboto bg-white scroll-smooth'>
-      <header>
-        <Navbar />
-      </header>
+    <div>
+      <div className=' mx-auto font-Roboto scroll-smooth bg-[#2d3748]'>
+        <header>
+          <Navbar />
+        </header>
 
-      <main>
-        <Outlet />
-      </main>
-      <footer>
-        <Footer />
-      </footer>
+        <main className='container mx-auto '>
+          <Outlet />
+        </main>
+        <footer>
+          <Footer />
+        </footer>
+      </div>
     </div>
   );
 };

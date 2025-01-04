@@ -1,19 +1,26 @@
-import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { Button } from '@mui/material';
+import {
+  FaDownload,
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Me from '../../assets/me.png';
 
 const Hero = () => {
   return (
-    <div className='flex flex-col items-center lg:flex-row lg:items-center justify-center lg:justify-between mx-4 sm:mx-6 py-8 sm:py-12 px-6 mt-16 lg:mt-20'>
+    <div className='flex flex-col items-center lg:flex-row lg:items-center justify-center lg:justify-between mx-4 pt-32'>
       <div className='text-center lg:text-left lg:max-w-lg'>
-        <p className='text-3xl sm:text-4xl lg:text-5xl font-bold text-black'>
-          MD. <span className='text-NavyBlue'>H</span>imel Mia
+        <p className='text-2xl sm:text-4xl lg:text-5xl font-bold text-white'>
+          <span className='text-navColor'>Hello</span>! I am
         </p>
-        <p className='text-xl sm:text-2xl font-bold mt-2 text-black'>
-          Front-End Web Developer
+        <p className='text-xl sm:text-4xl font-bold mt-2 ml-10 text-white'>
+          MD.<span className='text-navColor'>Himel</span> Mia
         </p>
-        <p className='font-semibold mt-4 sm:ml-16 text-sm sm:text-base'>
-          Let's Code The Future Together!
+        <p className='text-green-500 ml-20 font-bold mt-4'>
+          I'm a Front-End Web Developer
         </p>
 
         <ul className='flex justify-center lg:justify-start space-x-4 sm:space-x-6 mt-6'>
@@ -25,7 +32,7 @@ const Hero = () => {
             >
               <FaGithub
                 size={24}
-                className='text-3xl sm:text-4xl text-black hover:text-gray-600'
+                className='text-3xl sm:text-4xl text-white hover:text-navColor'
               />
             </Link>
           </li>
@@ -33,7 +40,7 @@ const Hero = () => {
             <Link to='#' target='_blank' rel='noopener noreferrer'>
               <FaLinkedin
                 size={24}
-                className='text-3xl sm:text-4xl text-black hover:text-gray-600'
+                className='text-3xl sm:text-4xl text-white hover:text-navColor'
               />
             </Link>
           </li>
@@ -45,7 +52,7 @@ const Hero = () => {
             >
               <FaTwitter
                 size={24}
-                className='text-3xl sm:text-4xl text-black hover:text-gray-600'
+                className='text-3xl sm:text-4xl text-white hover:text-navColor'
               />
             </Link>
           </li>
@@ -57,21 +64,27 @@ const Hero = () => {
             >
               <FaFacebook
                 size={24}
-                className='text-3xl sm:text-4xl text-black hover:text-gray-600'
+                className='text-3xl sm:text-4xl text-white hover:text-navColor'
               />
             </Link>
           </li>
         </ul>
-        <div className='mt-6 sm:mt-8'>
-          <Link
-            to='#'
-            download
-            className='bg-black text-white py-2 sm:py-3 px-6 sm:px-8 rounded-lg text-base sm:text-lg font-semibold hover:bg-gray-800 transition-all'
+
+        {/* Permanent Glowing Button */}
+        <div className='mt-6 text-white '>
+          <Button
+            variant='outlined'
+            color='inherit'
+            startIcon={<FaDownload />}
+            className=' text-navColor border-navColor shadow-md shadow-navColor transition-all duration-300 ease-in-out'
+            href='https://example.com/resume.pdf'
+            download='Himel_Mia_Resume.pdf'
           >
             Download Resume
-          </Link>
+          </Button>
         </div>
       </div>
+
       <div className='mt-6 sm:mt-8 lg:mt-0'>
         <img
           src={Me}

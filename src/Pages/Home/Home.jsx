@@ -5,11 +5,13 @@ import Skills from '../Skills/Skills';
 const Home = () => {
   return (
     <div className='container'>
-      <div className='mx-20'>
+      <div className='lg:mx-44 '>
         <Hero />
       </div>
       <AboutMe />
-      <Skills />
+      <div className=' mx-auto '>
+        <Skills />
+      </div>
     </div>
   );
 };

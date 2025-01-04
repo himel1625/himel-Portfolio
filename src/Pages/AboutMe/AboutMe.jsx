@@ -5,7 +5,7 @@ const AboutMe = () => {
     <section className='mt-28 px-6 sm:px-10 lg:px-20 xl:px-32'>
       <Title Header='About Me' />
       <div className='mt-10   w-full  rounded-lg p-6 container'>
-        <p className='text-black font-medium text-justify text-base sm:text-lg lg:text-xl leading-relaxed '>
+        <p className='text-[#c4c0c0]  font-medium text-justify text-base sm:text-lg lg:text-xl leading-relaxed '>
           <span className='block font-medium text-lg sm:text-xl lg:text-2xl text-primary mb-4'>
             Assalamu Alaikum!
           </span>
