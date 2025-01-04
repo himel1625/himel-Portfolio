@@ -77,7 +77,7 @@ const Hero = () => {
             color='inherit'
             startIcon={<FaDownload />}
             className=' text-navColor border-navColor shadow-md shadow-navColor transition-all duration-300 ease-in-out'
-            href='https://example.com/resume.pdf'
+            href='#'
             download='Himel_Mia_Resume.pdf'
           >
             Download Resume
