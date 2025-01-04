@@ -10,12 +10,18 @@ const Home = () => {
       <div className='lg:mx-44 '>
         <Hero />
       </div>
-      <AboutMe />
+      <div>
+        <AboutMe />
+      </div>
       <div className=' mx-auto '>
         <Skills />
       </div>
-      <Projects />
-      <Contact />
+      <div className='mx-auto text-center'>
+        <Projects />
+      </div>
+      <div>
+        <Contact />
+      </div>
     </div>
   );
 };

@@ -12,12 +12,12 @@ import {
   SiExpress,
   SiJavascript,
   SiMongodb,
+  SiNextdotjs,
   SiPostman,
   SiRedux,
   SiTailwindcss,
 } from 'react-icons/si';
 import Title from '../../Components/Title/Title';
-
 const skills = [
   { id: 1, name: 'HTML', icon: <FaHtml5 size={40} />, color: '#FF5733' },
   { id: 2, name: 'CSS', icon: <FaCss3Alt size={40} />, color: '#00acc1' },
@@ -57,11 +57,16 @@ const skills = [
     icon: <IoLogoFirebase size={40} />,
     color: '#F7DF1E',
   },
+  {
+    id: 14,
+    name: 'Next.js',
+    icon: <SiNextdotjs size={40} />,
+  },
 ];
 
 const Skills = () => {
   return (
-    <div className='mt-20'>
+    <div id='skills' className='mt-20 lg:pt-32 '>
       <Title Header='My Skills' />
       <div className='mt-20 mb-20'>
         <Marquee gradient={false} speed={20}>

@@ -2,7 +2,7 @@ import Title from '../../Components/Title/Title';
 
 const AboutMe = () => {
   return (
-    <section className='mt-28 px-6 sm:px-10 lg:px-20 xl:px-32'>
+    <section id='about' className='lg:pt-32 px-6 sm:px-10 lg:px-20 xl:px-32'>
       <Title Header='About Me' />
       <div className='mt-10   w-full  rounded-lg p-6 container'>
         <p className='text-[#c4c0c0]  font-medium text-justify text-base sm:text-lg lg:text-xl leading-relaxed '>
