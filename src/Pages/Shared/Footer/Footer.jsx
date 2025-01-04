@@ -8,7 +8,7 @@ const Footer = () => {
         sx={{ padding: '20px 0', textAlign: 'center' }}
       >
         <Typography>
-          &copy; {new Date().getFullYear()} All rights reserved . Himel
+          &copy; {new Date().getFullYear()} All rights reserved . (Himel Mia)
         </Typography>
       </Box>
     </div>

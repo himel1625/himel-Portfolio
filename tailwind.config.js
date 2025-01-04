@@ -8,8 +8,6 @@ export default {
       },
       colors: {
         NavyBlue: '#1A2A4B',
-        SilverGray: '#B0B0B0',
-        'custom-blue': '#2F4F6F',
       },
     },
   },

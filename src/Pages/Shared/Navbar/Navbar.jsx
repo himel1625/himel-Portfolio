@@ -17,7 +17,7 @@ const Navbar = () => {
           <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#6BAED9] to-[#A1D8F2] flex items-center'>
             <img className='h-8 w-8 ml-1' src={logo} alt='Logo' />
             <span>
-              Himel <span className='text-white'>M</span>ia
+              imel <span className='text-white'>M</span>ia
             </span>
           </span>
         </div>

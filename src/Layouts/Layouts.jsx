@@ -4,12 +4,12 @@ import Navbar from '../Pages/Shared/Navbar/Navbar';
 
 const Layouts = () => {
   return (
-    <div className='container mx-auto font-Roboto bg-[#F5F5F5]'>
+    <div className='container mx-auto font-Roboto bg-white scroll-smooth'>
       <header>
         <Navbar />
       </header>
 
-      <main className='w-full max-w-7xl mx-auto p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16'>
+      <main>
         <Outlet />
       </main>
       <footer>
