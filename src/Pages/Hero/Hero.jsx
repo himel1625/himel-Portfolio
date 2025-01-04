@@ -84,12 +84,11 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-
       <div className='mt-6 sm:mt-8 lg:mt-0'>
         <img
           src={Me}
           alt='MD. Himel Mia'
-          className='w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover mx-auto lg:mx-0'
+          className='w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover mx-auto lg:mx-0 border-4 border-navColor shadow-lg ring-2 ring-navColor ring-opacity-40'
         />
       </div>
     </div>

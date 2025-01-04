@@ -37,7 +37,12 @@ const skills = [
   { id: 6, name: 'Node JS', icon: <FaNodeJs size={40} />, color: '#68A063' },
   { id: 7, name: 'Express JS', icon: <SiExpress size={40} /> },
   { id: 8, name: 'MongoDB', icon: <SiMongodb size={40} />, color: '#47A248' },
-  { id: 9, name: 'Redux', icon: <SiRedux size={40} />, color: '#764ABC' },
+  {
+    id: 9,
+    name: 'Redux Toolkit',
+    icon: <SiRedux size={40} />,
+    color: '#764ABC',
+  },
   { id: 10, name: 'JWT' },
   {
     id: 11,
@@ -58,7 +63,7 @@ const Skills = () => {
   return (
     <div className='mt-20'>
       <Title Header='My Skills' />
-      <div className='mt-10 mb-10'>
+      <div className='mt-20 mb-20'>
         <Marquee gradient={false} speed={20}>
           {skills.map(skill => (
             <div
