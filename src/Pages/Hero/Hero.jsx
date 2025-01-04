@@ -4,10 +4,10 @@ import Me from '../../assets/me.png';
 
 const Hero = () => {
   return (
-    <div className='flex flex-col items-center lg:flex-row lg:items-center justify-center lg:justify-between mx-4 sm:mx-6 py-8 sm:py-12 px-6 mt-20'>
+    <div className='flex flex-col items-center lg:flex-row lg:items-center justify-center lg:justify-between mx-4 sm:mx-6 py-8 sm:py-12 px-6 mt-16 lg:mt-20'>
       <div className='text-center lg:text-left lg:max-w-lg'>
         <p className='text-3xl sm:text-4xl lg:text-5xl font-bold text-black'>
-          MD. <span className='text-NavyBlue  '>H</span>imel Mia
+          MD. <span className='text-NavyBlue'>H</span>imel Mia
         </p>
         <p className='text-xl sm:text-2xl font-bold mt-2 text-black'>
           Front-End Web Developer
@@ -76,7 +76,7 @@ const Hero = () => {
         <img
           src={Me}
           alt='MD. Himel Mia'
-          className='w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover '
+          className='w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover mx-auto lg:mx-0'
         />
       </div>
     </div>
