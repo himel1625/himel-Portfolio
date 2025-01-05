@@ -7,21 +7,34 @@ import {
   FaTwitter,
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Typewriter from 'typewriter-effect'; // Import TypewriterEffect
 import Me from '../../assets/me.png';
 
 const Hero = () => {
   return (
-    <div className='flex flex-col items-center lg:flex-row lg:items-center justify-center lg:justify-between mx-4 pt-32  min-h-[calc(90vh-232px)] '>
+    <div className='flex flex-col items-center lg:flex-row lg:items-center justify-center lg:justify-between mx-4 pt-32 min-h-[calc(90vh-232px)]'>
       <div className='text-center lg:text-left lg:max-w-lg'>
         <p className='text-2xl sm:text-4xl lg:text-6xl font-bold text-white'>
           <span className='text-navColor'>Hello</span>! I am
         </p>
-        <p className='text-xl sm:text-4xl    font-bold mt-2 ml-12 text-white'>
+        <p className='text-xl sm:text-4xl font-bold mt-2 ml-12 text-white'>
           MD.<span className='text-navColor'>Himel</span> Mia
         </p>
-        <p className='text-green-500 ml-20 font-bold mt-4'>
-          I'm a Front-End Web Developer
-        </p>
+        <div className='text-green-500 ml-20 lg:text-3xl font-bold mt-4'>
+          <Typewriter
+            options={{
+              strings: [
+                "I'm a Front-End Web Developer",
+                "I'm a MERN Stack Web Developer",
+                'I Build Modern Websites',
+                "Let's Code the Future Together!",
+              ],
+              autoStart: true,
+              loop: true,
+              deleteSpeed: 50,
+            }}
+          />
+        </div>
 
         <ul className='flex justify-center lg:justify-start space-x-4 sm:space-x-6 mt-6'>
           <li>

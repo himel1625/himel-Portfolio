@@ -1,31 +1,45 @@
-import { Card, CardActionArea, CardMedia } from '@mui/material';
-import img1 from '../../assets/ss1.png';
-import img2 from '../../assets/ss2.png';
-import img3 from '../../assets/ss3.png';
+import {
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Typography,
+} from '@mui/material';
+import img1 from '../../assets/img/img1.png';
+import img2 from '../../assets/img/img2.png';
+import img3 from '../../assets/img/img3.png';
 import Title from '../../Components/Title/Title';
 
 const Projects = () => {
   return (
-    <div id='Projects' className='lg:pt-32 '>
+    <div id='Projects' className='lg:pt-32'>
       <Title Header='My Projects' />
 
-      <div className='flex flex-wrap gap-6 p-4 justify-center lg:mt-32'>
-        <Card className='w-80 shadow-lg transition-shadow duration-300 ease-in-out'>
+      <div className='flex flex-wrap gap-8 justify-center p-4 lg:mt-32'>
+        {/* Card 1 */}
+        <Card className='w-80 shadow-2xl transition-transform transform hover:scale-105 duration-300 ease-in-out border-t-4 border-navColor'>
           <CardActionArea>
             <CardMedia
               component='img'
-              height='200'
+              height='250'
               width='100%'
               image={img1}
               alt='Project 1'
             />
-            <div className='flex justify-center p-4'>
-              <div className='flex gap-4'>
+            <CardContent className='flex flex-col items-center py-6'>
+              <Typography
+                variant='h6'
+                component='h2'
+                className='text-navColor font-semibold mb-4'
+              >
+                Full-Stack Restaurant Management
+              </Typography>
+              <div className='flex gap-6 mb-6'>
                 <a
                   href='https://github.com/himel1625/Full-Stack-Restaurant-Management-Web-Application?tab=readme-ov-file'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-navColor border-navColor shadow-md shadow-navColor transition-all duration-300 ease-in-out px-4 py-2 text-sm rounded-lg hover:bg-navColor-dark hover:border-navColor-dark'
+                  className='text-navColor border-b-2 border-navColor hover:border-navColor-dark py-2 px-4 text-sm transition-all duration-300 ease-in-out'
                 >
                   GitHub
                 </a>
@@ -33,31 +47,42 @@ const Projects = () => {
                   href='https://dinemaster-6b18e.web.app/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-navColor border-navColor shadow-md shadow-navColor transition-all duration-300 ease-in-out px-4 py-2 text-sm rounded-lg hover:bg-navColor-dark hover:border-navColor-dark'
+                  className='text-navColor border-b-2 border-navColor hover:border-navColor-dark py-2 px-4 text-sm transition-all duration-300 ease-in-out'
                 >
-                  Visit Project
+                  Live Project
                 </a>
               </div>
-            </div>
+              <Typography variant='body2' color='textSecondary'>
+                A complete full-stack restaurant management solution.
+              </Typography>
+            </CardContent>
           </CardActionArea>
         </Card>
 
-        <Card className='w-80 shadow-lg transition-shadow duration-300 ease-in-out'>
+        {/* Card 2 */}
+        <Card className='w-80 shadow-2xl transition-transform transform hover:scale-105 duration-300 ease-in-out border-t-4 border-navColor'>
           <CardActionArea>
             <CardMedia
               component='img'
-              height='200'
+              height='250'
               width='100%'
               image={img2}
               alt='Project 2'
             />
-            <div className='flex justify-center p-4'>
-              <div className='flex gap-4'>
+            <CardContent className='flex flex-col items-center py-6'>
+              <Typography
+                variant='h6'
+                component='h2'
+                className='text-navColor font-semibold mb-4'
+              >
+                Marketplace Web Application
+              </Typography>
+              <div className='flex gap-6 mb-6'>
                 <a
                   href='https://github.com/himel1625/Full-Stack-Marketplace-Web-Application'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-navColor border-navColor shadow-md shadow-navColor transition-all duration-300 ease-in-out px-4 py-2 text-sm rounded-lg hover:bg-navColor-dark hover:border-navColor-dark'
+                  className='text-navColor border-b-2 border-navColor hover:border-navColor-dark py-2 px-4 text-sm transition-all duration-300 ease-in-out'
                 >
                   GitHub
                 </a>
@@ -65,31 +90,42 @@ const Projects = () => {
                   href='https://solosphere-9150a.web.app/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-navColor border-navColor shadow-md shadow-navColor transition-all duration-300 ease-in-out px-4 py-2 text-sm rounded-lg hover:bg-navColor-dark hover:border-navColor-dark'
+                  className='text-navColor border-b-2 border-navColor hover:border-navColor-dark py-2 px-4 text-sm transition-all duration-300 ease-in-out'
                 >
-                  Visit Project
+                  Live Project
                 </a>
               </div>
-            </div>
+              <Typography variant='body2' color='textSecondary'>
+                A modern e-commerce platform with full functionality.
+              </Typography>
+            </CardContent>
           </CardActionArea>
         </Card>
 
-        <Card className='w-80 shadow-lg transition-shadow duration-300 ease-in-out'>
+        {/* Card 3 */}
+        <Card className='w-80 shadow-2xl transition-transform transform hover:scale-105 duration-300 ease-in-out border-t-4 border-navColor'>
           <CardActionArea>
             <CardMedia
               component='img'
-              height='200'
+              height='250'
               width='100%'
               image={img3}
               alt='Project 3'
             />
-            <div className='flex justify-center p-4'>
-              <div className='flex gap-4'>
+            <CardContent className='flex flex-col items-center py-6'>
+              <Typography
+                variant='h6'
+                component='h2'
+                className='text-navColor font-semibold mb-4'
+              >
+                Sports Management Application
+              </Typography>
+              <div className='flex gap-6 mb-6'>
                 <a
                   href='https://github.com/himel1625/Green-Sports'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-navColor border-navColor shadow-md shadow-navColor transition-all duration-300 ease-in-out px-4 py-2 text-sm rounded-lg hover:bg-navColor-dark hover:border-navColor-dark'
+                  className='text-navColor border-b-2 border-navColor hover:border-navColor-dark py-2 px-4 text-sm transition-all duration-300 ease-in-out'
                 >
                   GitHub
                 </a>
@@ -97,12 +133,15 @@ const Projects = () => {
                   href='https://green-sports-4eb7c.web.app/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-navColor border-navColor shadow-md shadow-navColor transition-all duration-300 ease-in-out px-4 py-2 text-sm rounded-lg hover:bg-navColor-dark hover:border-navColor-dark'
+                  className='text-navColor border-b-2 border-navColor hover:border-navColor-dark py-2 px-4 text-sm transition-all duration-300 ease-in-out'
                 >
-                  Visit Project
+                  Live Project
                 </a>
               </div>
-            </div>
+              <Typography variant='body2' color='textSecondary'>
+                A comprehensive system to manage sports events and teams.
+              </Typography>
+            </CardContent>
           </CardActionArea>
         </Card>
       </div>

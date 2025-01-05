@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Paper, TextField, Typography } from '@mui/material';
-import emailjs from 'emailjs-com'; // Import the emailjs-com package
+import emailjs from 'emailjs-com';
 import React, { useRef } from 'react';
 import toast from 'react-hot-toast';
 import {
@@ -21,17 +21,18 @@ const Contact = () => {
       })
       .then(
         () => {
-          toast.success('SUCCESS!');
+          toast.success('Message Sent Successfully!');
           console.log('Email sent successfully');
         },
         error => {
-          console.log('FAILED...', error.text);
+          console.log('Failed to send email...', error.text);
         },
       );
     e.target.reset();
   };
+
   const commonStyles =
-    'p-6 flex flex-col justify-center items-center shadow-md rounded-lg';
+    'p-6 flex flex-col justify-center items-center shadow-xl rounded-lg transition-all duration-300 ease-in-out hover:scale-105';
 
   return (
     <div id='Contact' className='lg:pt-20 pb-20'>
@@ -40,13 +41,14 @@ const Contact = () => {
           <Title Header='Contact Me' />
         </div>
         <Grid container spacing={4}>
+          {/* Contact Form Section */}
           <Grid item xs={12} md={6}>
             <Paper
               className={`${commonStyles}`}
               sx={{
-                height: { xs: 'auto', md: '300px' },
+                height: { xs: 'auto', md: '350px' },
                 backgroundColor: 'transparent',
-                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+                boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.1)',
                 display: 'flex',
                 flexDirection: 'column',
               }}
@@ -59,14 +61,22 @@ const Contact = () => {
                     name='from_name'
                     type='text'
                     variant='outlined'
-                    className='border-gray-300'
                     margin='normal'
+                    required
                     sx={{
-                      '& .MuiInputBase-input': {
+                      '& .MuiInputBase-root': {
                         color: '#0dccf2',
                       },
+                      '& .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#0dccf2',
+                      },
+                      '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#0dccf2',
+                      },
+                      '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#0dccf2',
+                      },
                     }}
-                    required
                   />
                 </div>
                 <div className='mb-4'>
@@ -76,14 +86,22 @@ const Contact = () => {
                     name='from_email'
                     type='email'
                     variant='outlined'
-                    className='border-gray-300'
                     margin='normal'
+                    required
                     sx={{
-                      '& .MuiInputBase-input': {
+                      '& .MuiInputBase-root': {
                         color: '#0dccf2',
                       },
+                      '& .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#0dccf2',
+                      },
+                      '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#0dccf2',
+                      },
+                      '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#0dccf2',
+                      },
                     }}
-                    required
                   />
                 </div>
                 <div className='mb-4'>
@@ -94,22 +112,30 @@ const Contact = () => {
                     multiline
                     rows={4}
                     variant='outlined'
-                    className='border-gray-300'
                     margin='normal'
+                    required
                     sx={{
-                      '& .MuiInputBase-input': {
+                      '& .MuiInputBase-root': {
                         color: '#0dccf2',
                       },
+                      '& .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#0dccf2',
+                      },
+                      '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#0dccf2',
+                      },
+                      '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#0dccf2',
+                      },
                     }}
-                    required
                   />
                 </div>
-                <div className='pb-6 text-white'>
+                <div className='pb-6'>
                   <Button
                     type='submit'
                     variant='outlined'
                     color='inherit'
-                    className='text-navColor border-navColor shadow-md shadow-navColor transition-all duration-300 ease-in-out'
+                    className='text-navColor border-navColor shadow-md hover:shadow-lg transition-all duration-300 ease-in-out'
                   >
                     Submit
                   </Button>
@@ -118,14 +144,14 @@ const Contact = () => {
             </Paper>
           </Grid>
 
-          {/* Location, Email, Phone, and WhatsApp Section */}
+          {/* Contact Info Section */}
           <Grid item xs={12} md={6}>
             <Paper
               className={`${commonStyles}`}
               sx={{
-                height: { xs: 'auto', md: '300px' },
+                height: { xs: 'auto', md: '350px' },
                 backgroundColor: 'transparent',
-                boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+                boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.1)',
                 display: 'flex',
                 flexDirection: 'column',
               }}

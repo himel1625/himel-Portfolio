@@ -1,86 +1,189 @@
-import React from 'react';
-import Marquee from 'react-fast-marquee';
-import {
-  FaBootstrap,
-  FaCss3Alt,
-  FaHtml5,
-  FaNodeJs,
-  FaReact,
-} from 'react-icons/fa';
-import { IoLogoFirebase } from 'react-icons/io5';
-import {
-  SiExpress,
-  SiJavascript,
-  SiMongodb,
-  SiNextdotjs,
-  SiPostman,
-  SiRedux,
-  SiTailwindcss,
-} from 'react-icons/si';
 import Title from '../../Components/Title/Title';
-const skills = [
-  { id: 1, name: 'HTML', icon: <FaHtml5 size={40} />, color: '#FF5733' },
-  { id: 2, name: 'CSS', icon: <FaCss3Alt size={40} />, color: '#00acc1' },
-  {
-    id: 3,
-    name: 'Tailwind CSS',
-    icon: <SiTailwindcss size={40} />,
-    color: '#38BDF8',
-  },
-  {
-    id: 4,
-    name: 'JavaScript',
-    icon: <SiJavascript size={40} />,
-    color: '#F7DF1E',
-  },
-  { id: 5, name: 'React JS', icon: <FaReact size={40} />, color: '#61DAFB' },
-  { id: 6, name: 'Node JS', icon: <FaNodeJs size={40} />, color: '#68A063' },
-  { id: 7, name: 'Express JS', icon: <SiExpress size={40} /> },
-  { id: 8, name: 'MongoDB', icon: <SiMongodb size={40} />, color: '#47A248' },
-  {
-    id: 9,
-    name: 'Redux Toolkit',
-    icon: <SiRedux size={40} />,
-    color: '#764ABC',
-  },
-  { id: 10, name: 'JWT' },
-  {
-    id: 11,
-    name: 'Bootstrap',
-    icon: <FaBootstrap size={40} />,
-    color: '#7952B3',
-  },
-  { id: 12, name: 'Postman', icon: <SiPostman size={40} />, color: '#FF6C37' },
-  {
-    id: 13,
-    name: 'Firebase',
-    icon: <IoLogoFirebase size={40} />,
-    color: '#F7DF1E',
-  },
-  {
-    id: 14,
-    name: 'Next.js',
-    icon: <SiNextdotjs size={40} />,
-  },
-];
+import Bootstrap from '../../assets/Bootstrap.png';
+import ReactJS from '../../assets/React-icon.svg.png';
+import Tailwind from '../../assets/Tailwind_CSS_Logo.svg.png';
+import css from '../../assets/csss.png';
+import firebase from '../../assets/firebase.png';
+import html from '../../assets/html.webp';
+import javascript from '../../assets/javascript.png';
+import mui from '../../assets/mui.png';
+import redux from '../../assets/redux.png';
+import './skills.css';
 
+import exprees from '../../assets/express-js.png';
+import jwt from '../../assets/jwt.svg';
+import mongodb from '../../assets/mongodb.png';
+import node from '../../assets/nodejspng.png';
+import typescript from '../../assets/typescript.png';
+
+import { Tooltip } from 'react-tooltip';
 const Skills = () => {
   return (
     <div id='skills' className='mt-20 lg:pt-32 '>
-      <Title Header='My Skills' />
-      <div className='mt-20 mb-20'>
-        <Marquee gradient={false} speed={20}>
-          {skills.map(skill => (
-            <div
-              key={skill.id}
-              className='flex items-center justify-center space-x-4 px-6 py-2 hover:scale-105 transition duration-300'
-              style={{ backgroundColor: skill.color }}
-            >
-              {skill.icon}
-              <span className='text-white font-bold'>{skill.name}</span>
-            </div>
-          ))}
-        </Marquee>
+      <div className='mb-44'>
+        <Title Header='My Skills' />
+      </div>
+      <div className='grid md:grid-cols-2 relative container'>
+        <div className='flex min-h-[400px]  items-center justify-center'>
+          <div className=''>
+            <Tooltip id='html' place='bottom' className='absolute text-gray1' />
+            <img
+              src={html}
+              className='html lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt=''
+              data-tooltip-id='html'
+              data-tooltip-content='HTML5'
+            />
+            <Tooltip id='css' place='bottom' className='absolute text-gray1' />
+            <img
+              src={css}
+              className='css lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt='css'
+              data-tooltip-id='css'
+              data-tooltip-content='CSS3'
+            />
+            <Tooltip
+              id='javascript'
+              place='bottom'
+              className='absolute text-gray1'
+            />
+            <img
+              src={javascript}
+              className='javascript lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt='javascript'
+              data-tooltip-id='javascript'
+              data-tooltip-content='JavaScript'
+            />
+            <Tooltip
+              id='Bootstrap'
+              place='bottom'
+              className='absolute text-gray1'
+            />
+            <img
+              src={Bootstrap}
+              className='Bootstrap lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt='Bootstrap'
+              data-tooltip-id='Bootstrap'
+              data-tooltip-content='Bootstrap'
+            />
+            <Tooltip
+              id='Tailwind'
+              place='bottom'
+              className='absolute text-gray1'
+            />
+            <img
+              src={Tailwind}
+              className='Tailwind lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt='Tailwind'
+              data-tooltip-id='Tailwind'
+              data-tooltip-content='Tailwind CSS'
+            />
+            <Tooltip
+              id='ReactJS'
+              place='bottom'
+              className='absolute text-gray1'
+            />
+            <img
+              src={ReactJS}
+              className='ReactJS lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt='ReactJS'
+              data-tooltip-id='ReactJS'
+              data-tooltip-content='React JS'
+            />
+            <Tooltip
+              id='firebase'
+              place='bottom'
+              className='absolute text-gray1'
+            />
+            <img
+              src={firebase}
+              className='firebase lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt='firebase'
+              data-tooltip-id='firebase'
+              data-tooltip-content='Firebase'
+            />
+            <Tooltip id='mui' place='bottom' className='absolute text-gray1' />
+            <img
+              src={mui}
+              className='mui lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt='mui'
+              data-tooltip-id='mui'
+              data-tooltip-content='Material-UI'
+            />
+
+            <h4 className='text md:-ml-7 -ml-4 title'>Frontend</h4>
+          </div>
+        </div>
+        <div className='min-h-[400px] flex  items-center justify-center'>
+          <div className=''>
+            <Tooltip id='node' place='bottom' className='absolute text-gray1' />
+            <img
+              src={node}
+              className='node lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt=''
+              data-tooltip-id='node'
+              data-tooltip-content='Node Js'
+            />
+            <Tooltip
+              id='exprees'
+              place='bottom'
+              className='absolute text-gray1'
+            />
+            <img
+              src={exprees}
+              className='exprees lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt=''
+              data-tooltip-id='exprees'
+              data-tooltip-content='Express Js'
+            />
+            <Tooltip
+              id='mongodb'
+              place='bottom'
+              className='absolute text-gray1'
+            />
+            <img
+              src={mongodb}
+              className='mongodb lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt=''
+              data-tooltip-id='mongodb'
+              data-tooltip-content='MongoDB'
+            />
+
+            <Tooltip id='jwt' place='bottom' className='absolute text-gray1' />
+            <img
+              src={jwt}
+              data-tooltip-id='jwt'
+              data-tooltip-content='Json Web Token'
+              className='jwt lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt=''
+            />
+            <Tooltip
+              id='typescript'
+              place='bottom'
+              className='absolute text-gray1'
+            />
+            <img
+              src={typescript}
+              className='typescript lg:h-[50px] md:h-[45px] h-[35px] absolute'
+              alt=''
+              data-tooltip-id='typescript'
+              data-tooltip-content='Typescript'
+            />
+            <img
+              src={redux}
+              className='redux lg:h-[50px] md:h-[45px] h-[35px]  absolute'
+              alt='redux'
+              data-tooltip-id='redux'
+              data-tooltip-content='Redux'
+            />
+            <Tooltip
+              id='redux'
+              place='bottom'
+              className='absolute text-gray1'
+            />
+            <h4 className='text md:-ml-7 -ml-4 title'>Backend</h4>
+          </div>
+        </div>
       </div>
     </div>
   );

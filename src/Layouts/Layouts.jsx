@@ -1,44 +1,46 @@
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { GrReactjs } from 'react-icons/gr';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Pages/Shared/Footer/Footer';
 import Navbar from '../Pages/Shared/Navbar/Navbar';
-
 const Layouts = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    const handleMouseMove = event => {
-      setMousePosition({ x: event.clientX, y: event.clientY });
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+  const rocketPosition = Math.min(
+    Math.max(scrollY, 50),
+    window.innerHeight - 100,
+  );
+
   return (
     <div className='relative'>
-      {/* Moving Dot with Smaller Size and Larger Shadows */}
-      <div
-        className='w-6 h-6  rounded-full bg-navColor fixed pointer-events-none transition-all duration-300 ease-out'
-        style={{
-          top: `${mousePosition.y}px`,
-          left: `${mousePosition.x}px`,
-          transform: 'translate(-50%, -50%)',
-          boxShadow: `
-            0 0 10px 5px #0dccf2, 
-            0 0 20px 10px #0dccf2, 
-            0 0 30px 15px #0dccf2, 
-            0 0 40px 20px #0dccf2, 
-            0 0 50px 25px #0dccf2, 
-            0 0 60px 30px #0dccf2
-          `,
+      <motion.div
+        initial={{ y: -100 }}
+        animate={{ y: rocketPosition }}
+        transition={{
+          type: 'spring',
+          stiffness: 50,
+          damping: 10,
         }}
-      ></div>
+        className='fixed left-1/2 transform -translate-y-1/2'
+      >
+        <span  className='text-blue-700' >
+          <GrReactjs size={30} />
+        </span>
+      </motion.div>
 
-      {/* Main Layout */}
       <div className='mx-auto font-Roboto scroll-smooth bg-[#2d3748]'>
         <header className='sticky top-0 z-50'>
           <Navbar />
